@@ -1,4 +1,4 @@
-FROM ppc64le/centos
+FROM ppc64le/centos:7
 
 # runtime support to enable npm build capabilities
 RUN yum -y install libstdc++ make gcc-c++ numactl-devel
