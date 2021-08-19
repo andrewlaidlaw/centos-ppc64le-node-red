@@ -4,7 +4,7 @@ FROM ppc64le/centos:7
 RUN yum -y install libstdc++ make gcc-c++ numactl-devel
 
 # XLC runtime support - required by ibm_db node package
-RUN curl -sL http://public.dhe.ibm.com/software/server/POWER/Linux/xl-compiler/eval/ppc64le/rhel7/libm-xl-compiler-eval.repo \
+RUN curl -sL http://public.dhe.ibm.com/software/server/POWER/Linux/xl-compiler/eval/ppc64le/rhel7/libm-xl-compiler-eval.repo > /etc/yum.repos.d/xl-compilers.repo \
         && yum -y install libxlc
         
 #install most up-to-date LTS node for ppc64le
